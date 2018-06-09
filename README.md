@@ -1,25 +1,56 @@
 # Weekend Challenge
 
+This weekend's challenge was to create an application using Springboot and Java.
 
-### Instructions
+This project is a small Twitter clone (Chitter) that will allow the users to post messages to a public stream.
 
-1. Fork and clone this repository.
-2. Choose one of the following projects to build a Springboot application
-
-3. Open a Pull Request back to this base GitHub repository (it will update with changes as you keep pushing)
-4. Build the project!
+More details on the Springboot challenge here: https://github.com/CharlyMannion/springboot_challenge
+More details on the Chitter challenge here: https://github.com/makersacademy/chitter-challenge
 
 
-## 1. RPS
+## User Stories:
 
-More details here: https://github.com/makersacademy/rps-challenge
+```
+STRAIGHT UP
 
+As a Maker
+So that I can let people know what I am doing
+I want to post a message (peep) to chitter
 
-## 2. Chitter (without users)
+As a maker
+So that I can see what others are saying
+I want to see all peeps in reverse chronological order
 
-More details here: https://github.com/makersacademy/chitter-challenge
+As a Maker
+So that I can better appreciate the context of a peep
+I want to see the time at which it was made
 
+As a Maker
+So that I can post messages on Chitter as me
+I want to sign up for Chitter
 
-## 3. Chitter (with user sign up/log in)
+HARDER
 
-More details here: https://github.com/makersacademy/chitter-challenge
+As a Maker
+So that only I can post messages on Chitter as me
+I want to log in to Chitter
+
+As a Maker
+So that I can avoid others posting messages on Chitter as me
+I want to log out of Chitter
+
+ADVANCED
+
+As a Maker
+So that I can stay constantly tapped in to the shouty box of Chitter
+I want to receive an email if I am tagged in a Peep
+```
+
+Notes on functionality:
+------
+
+* You don't have to be logged in to see the peeps.
+* Makers sign up to chitter with their email, password, name and a username (e.g. samm@makersacademy.com, password123, Sam Morgan, sjmog).
+* The username and email are unique.
+* Peeps (posts to chitter) have the name of the maker and their user handle.
+* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
