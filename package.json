@@ -1,0 +1,19 @@
+{
+  "name": "springboot_challenge",
+  "version": "1.0.0",
+  "description": "This weekend's challenge was to create an application using Springboot and Java.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlyMannion/springboot_challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  ""bugs"": {
+    "url": "https://github.com/CharlyMannion/springboot_challenge/issues"
+  },
+  "homepage": "https://github.com/CharlyMannion/springboot_challenge#readme"
+}
