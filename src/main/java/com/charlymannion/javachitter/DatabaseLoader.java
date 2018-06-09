@@ -10,13 +10,13 @@ public class DatabaseLoader implements CommandLineRunner {
     private final PeepRepository repository;
 
     @Autowired
-    public DatabaseLoader(PeepRepository, repository) {
+    public DatabaseLoader(PeepRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public void run(String... strings) throw Exception {
+    public void run(String... strings) throws Exception {
         this.repository.save(new Peep("My first Peep!"));
     }
-    
+
 }
