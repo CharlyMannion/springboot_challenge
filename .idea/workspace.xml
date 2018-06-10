@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7edc7fd3-9623-4b49-ad34-a8996b5ef2ea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="7edc7fd3-9623-4b49-ad34-a8996b5ef2ea" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+            <state relative-caret-position="128">
+              <caret line="132" selection-start-line="132" selection-end-line="136" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -549,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+        <state relative-caret-position="128">
+          <caret line="132" selection-start-line="132" selection-end-line="136" selection-end-column="5" />
         </state>
       </provider>
     </entry>
