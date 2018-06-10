@@ -27,25 +27,59 @@ var root = '/api';
     }
 
     loadFromServer(pageSize) {
-    	follow(client, root, [
-    		{rel: 'peeps', params: {size: pageSize}}]
-    	).then(peepCollection => {
-    		return client({
-    			method: 'GET',
-    			path: peepCollection.entity._links.profile.href,
-    			headers: {'Accept': 'application/schema+json'}
-    		}).then(schema => {
-    			this.schema = schema.entity;
-    			return peepCollection;
+    		follow(client, root, [
+    				{rel: 'peeps', params: {size: pageSize}}]
+    		).then(peepCollection => {
+    				return client({
+    					method: 'GET',
+    					path: peepCollection.entity._links.profile.href,
+    					headers: {'Accept': 'application/schema+json'}
+    				}).then(schema => {
+    					this.schema = schema.entity;
+    					this.links = peepCollection.entity._links;
+    					return peepCollection;
+    				});
+    		}).then(peepCollection => {
+    			this.page = peepCollection.entity.page;
+    			return peepCollection.entity._embedded.peeps.map(peep =>
+    					client({
+    						method: 'GET',
+    						path: peep._links.self.href
+    					})
+    			);
+    		}).then(peepPromises => {
+    			return when.all(peepPromises);
+    		}).done(peeps => {
+    			this.setState({
+    				page: this.page,
+    				peeps: peeps,
+    				attributes: Object.keys(this.schema.properties),
+    				pageSize: pageSize,
+    				links: this.links
+    			});
     		});
-    	}).done(peepCollection => {
-    		this.setState({
-    			peeps: peepCollection.entity._embedded.peeps,
-    			attributes: Object.keys(this.schema.properties),
-    			pageSize: pageSize,
-    			links: peepCollection.entity._links});
-    	});
-    }
+    	}
+
+//    loadFromServer(pageSize) {
+//    	follow(client, root, [
+//    		{rel: 'peeps', params: {size: pageSize}}]
+//    	).then(peepCollection => {
+//    		return client({
+//    			method: 'GET',
+//    			path: peepCollection.entity._links.profile.href,
+//    			headers: {'Accept': 'application/schema+json'}
+//    		}).then(schema => {
+//    			this.schema = schema.entity;
+//    			return peepCollection;
+//    		});
+//    	}).done(peepCollection => {
+//    		this.setState({
+//    			peeps: peepCollection.entity._embedded.peeps,
+//    			attributes: Object.keys(this.schema.properties),
+//    			pageSize: pageSize,
+//    			links: peepCollection.entity._links});
+//    	});
+//    }
 
     onCreate(newPeep) {
     	follow(client, root, ['peeps']).then(peepCollection => {
