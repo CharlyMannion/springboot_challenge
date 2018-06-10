@@ -16,7 +16,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        this.repository.save(new Peep("Peep peep peep"));
+        this.repository.save(new Peep("NEW PEEPS - chitter springboot version Peep peep peep"));
         this.repository.save(new Peep("Peep me some glitter mate"));
         this.repository.save(new Peep("Peep peep GLITTER"));
 
