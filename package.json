@@ -1,19 +1,41 @@
 {
-  "name": "springboot_challenge",
-  "version": "1.0.0",
-  "description": "This weekend's challenge was to create an application using Springboot and Java.",
-  "main": "webpack.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "spring-data-rest-and-reactjs",
+  "version": "0.1.0",
+  "description": "Demo of ReactJS + Spring Data REST",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CharlyMannion/springboot_challenge.git"
+    "url": "git@github.com:spring-guides/tut-react-and-spring-data-rest.git"
   },
-  "author": "",
-  "license": "ISC",
-  ""bugs"": {
-    "url": "https://github.com/CharlyMannion/springboot_challenge/issues"
+  "keywords": [
+    "rest",
+    "hateoas",
+    "spring",
+    "data",
+    "react"
+  ],
+  "author": "Greg L. Turnquist",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/spring-guides/tut-react-and-spring-data-rest/issues"
   },
-  "homepage": "https://github.com/CharlyMannion/springboot_challenge#readme"
+  "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "rest": "^1.3.1",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "watch": "webpack --watch -d",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "jest": "^23.1.0",
+    "react-test-renderer": "^15.3.2"
+  }
 }
