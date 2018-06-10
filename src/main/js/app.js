@@ -2,7 +2,9 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
 
-
+const when = require('when');
+const follow = require('./follow'); // function to hop multiple links by "rel"
+const stompClient = require('./websocket-listener');
 
 class App extends React.Component {
 
